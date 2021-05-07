@@ -20,6 +20,7 @@
 
 
 from lib.actions import HpeNimbleBaseAction
+from datetime import datetime
 
 class Events(HpeNimbleBaseAction):
     def run(self):
