@@ -21,6 +21,7 @@
 import pymongo
 from pymongo import MongoClient
 from nimbleclient import NimOSClient
+from datetime import datetime
 from st2common.runners.base_action import Action
 
 class HpeNimbleBaseAction(Action):
