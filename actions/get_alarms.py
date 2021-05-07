@@ -22,7 +22,7 @@
 from lib.actions import HpeNimbleBaseAction
 from datetime import datetime
 
-class Events(HpeNimbleBaseAction):
+class Alarms(HpeNimbleBaseAction):
     def run(self):
         # Connect to the system
         api = self.client
