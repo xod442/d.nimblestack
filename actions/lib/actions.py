@@ -29,9 +29,9 @@ class HpeNimbleBaseAction(Action):
         self.client = self._get_client()
 
     def _get_client(self):
-        "ipaddress": self.config['ipaddress']
-        "username": self.config['username']
-        "password": self.config['password']
+        ipaddress = self.config['ipaddress']
+        username = self.config['username']
+        password = self.config['password']
 
         # URL to create an organization.
         client = NimOSClient(ipaddress,username,password)

@@ -24,7 +24,7 @@ from lib.actions import HpeNimbleBaseAction
 class Events(HpeNimbleBaseAction):
     def run(self):
         # Connect to the system
-        api = client(hostip,username,password)
+        api = self.client()
         # Setup some variables
         event_data = []
         # Get the arrays
