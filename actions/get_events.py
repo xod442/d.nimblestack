@@ -43,4 +43,6 @@ class Events(HpeNimbleBaseAction):
                     entry['severity'],
                     entry['summary']
                     ]
-        return eventz
+
+            event_data.append(eventz)
+        return event_data
