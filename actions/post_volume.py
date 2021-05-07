@@ -21,7 +21,7 @@
 
 from lib.actions import HpeNimbleBaseAction
 
-class Volumes(HpeNibleBaseAction):
+class Volumes(HpeNimbleBaseAction):
     def run(self,name=name,size=size,limit_iops=limit_iops):
         #
         vol = self.client.volumes.create(name=name, size=size, limit_iops=limit_iops)
