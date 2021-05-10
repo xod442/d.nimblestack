@@ -25,7 +25,7 @@ from lib.actions import MongoBaseAction
 
 
 class loadDb(MongoBaseAction):
-    def run(self, alarms):
+    def run(self, events):
 
         mydb = self.dbclient["app_db"]
         known = mydb["nimbleevents"]
