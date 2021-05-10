@@ -42,5 +42,8 @@ class loadDb(MongoBaseAction):
                 new_event['u_summary']=event[3]
                 new_event['u_process']='no'
                 write_record = known.insert_one(new_event)
+
+            else:
+                records='Fail to write mongo record, possible duplicate'
                 # write_record = process.insert_one(alarm)
         return (records)
