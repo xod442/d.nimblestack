@@ -28,7 +28,7 @@ class loadDb(MongoBaseAction):
     def run(self, events):
 
         mydb = self.dbclient["app_db"]
-        known = mydb["nimble-events"]
+        known = mydb["nimbleevents"]
 
         new_event={}
 

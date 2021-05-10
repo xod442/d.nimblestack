@@ -28,7 +28,7 @@ class loadDb(MongoBaseAction):
     def run(self):
 
         mydb = self.dbclient["app_db"]
-        known = mydb["nimble-events"]
+        known = mydb["nimbleevents"]
 
         list_to_process = []
 
