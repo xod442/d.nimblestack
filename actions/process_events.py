@@ -30,17 +30,7 @@ class loadDb(MongoBaseAction):
         mydb = self.dbclient["app_db"]
         known = mydb["nimble-events"]
 
-        new_event={}
+        for e in events:
+            known.update_one({"_id":e['_id']},{"$set":{"u_process":"yes"}})
 
-        for event in events:
-            myquery = { "_id" : event['time'] }
-            records = known.find(myquery).count()
-            if records == 0:
-                new_event['u_category']=event['category']
-                new_event['u_severity']=event['severity']
-                new_event['u_time']=event['time']
-                new_event['u_summary']=event['summary']
-                new_event['u_process']='no'
-                write_record = known.insert_one(new_event)
-                # write_record = process.insert_one(alarm)
-        return (records)
+        return ()
