@@ -41,7 +41,8 @@ class Events(HpeNimbleBaseAction):
                     entry['category'],
                     time,
                     entry['severity'],
-                    entry['summary']
+                    entry['summary'],
+                    entry['id']
                     ]
 
             event_data.append(eventz)

@@ -33,13 +33,13 @@ class loadDb(MongoBaseAction):
         new_event={}
 
         for event in events:
-            myquery = { "_id" : event['time'] }
+            myquery = { "_id" : event[4] }
             records = known.find(myquery).count()
             if records == 0:
-                new_event['u_category']=event['category']
-                new_event['u_severity']=event['severity']
-                new_event['u_time']=event['time']
-                new_event['u_summary']=event['summary']
+                new_event['u_category']=event[0]
+                new_event['u_severity']=event[2]
+                new_event['u_time']=event[1]
+                new_event['u_summary']=event[3]
                 new_event['u_process']='no'
                 write_record = known.insert_one(new_event)
                 # write_record = process.insert_one(alarm)
