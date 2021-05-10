@@ -33,7 +33,7 @@ class loadDb(MongoBaseAction):
         new_event={}
 
         for event in events:
-            myquery = { "_id" : event[4] }
+            myquery = { "u_id" : event[4] }
             records = known.find(myquery).count()
             if records == 0:
                 new_event['u_category']=event[0]

@@ -28,7 +28,7 @@ class loadDb(MongoBaseAction):
     def run(self, alarms):
 
         mydb = self.dbclient["app_db"]
-        known = mydb["nimble-events"]
+        known = mydb["nimbleevents"]
 
         for e in events:
             known.update_one({"_id":e['_id']},{"$set":{"u_process":"yes"}})
