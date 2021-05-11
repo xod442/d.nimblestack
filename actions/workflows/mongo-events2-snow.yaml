@@ -13,7 +13,7 @@ tasks:
 
   snowalerts:
     with: <% ctx().events %>
-    action: servicenow.create_record table="u_nimble_eventsu_nible_events" payload='<% item() %>'
+    action: servicenow.create_record table="u_nimble_eventsu_nimble_events" payload='<% item() %>'
     next:
       - when: <% succeeded() %>
         do: processevents

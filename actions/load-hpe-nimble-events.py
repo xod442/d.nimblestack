@@ -41,6 +41,7 @@ class loadDb(MongoBaseAction):
                 new_event['u_time']=event[1]
                 new_event['u_summary']=event[3]
                 new_event['u_id']=event[4]
+                new_event['_id']=event[4]
                 new_event['u_process']='no'
                 write_record = known.insert_one(new_event)
                 new_event={}
